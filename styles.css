@@ -25,27 +25,30 @@ body {
 
 .form-wrapper {
     background: rgba(255, 255, 255, 0.95);
-    padding: 30px;
+    padding: 30px 50px;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 450px; 
-    text-align: center; 
+    max-width: 1000px;
+    text-align: left;
 }
 
 .logo {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .logo img {
-    max-width: 200px; 
+    max-width: 150px;
     width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 15px;
     width: 100%;
 }
 
@@ -54,23 +57,26 @@ form {
     flex-direction: column;
 }
 
-.form-group:nth-child(1), 
-.form-group:nth-child(10) { 
+.form-group:nth-child(1),
+.form-group:nth-child(10) {
     grid-column: span 2;
 }
 
 label {
     font-weight: bold;
     color: rgb(7, 7, 7);
-    font-size: 14px;
+    font-size: 17px;
+    padding: 5px;
+    text-align: left;
 }
 
 input {
-    padding: 8px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
-    outline: none;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input:focus {
@@ -79,19 +85,21 @@ input:focus {
 }
 
 button {
-    grid-column: span 2;
-    background: #810000; 
+    grid-column: span 2; /* O botão ocupa duas colunas */
+    width: 100%; /* O botão ocupa 100% da largura do contêiner */
+    background: #810000;
     color: white;
-    padding: 10px;
+    padding: 12px 40px;
     border: none;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 20px;
     cursor: pointer;
     font-size: 16px;
     transition: background 0.3s, transform 0.2s;
+    text-align: center; /* Centraliza o texto dentro do botão */
 }
 
 button:hover {
-    background: #3b0000; 
-    transform: scale(1.05); 
+    background: #3b0000;
+    transform: scale(1.05);
 }
